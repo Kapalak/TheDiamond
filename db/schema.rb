@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_100504) do
+ActiveRecord::Schema.define(version: 2020_10_06_111936) do
 
   create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.string "photo_url"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "photo_url"
     t.string "status"
